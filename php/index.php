@@ -30,18 +30,19 @@
                 <?php 
                 foreach ($database as $album) { ?>
                 <li class="list-item">
-                    <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>" class="cover">
-                    <div class="info-album">
-                        <h3 class="title-cd">
-                            <?php echo $album['title'] ?>
-                        </h3>
-                        <div class="author"><?php echo $album['author'] ?></div>
-                        <div class="year"><?php echo $album['year'] ?></div>
-                        <div class="genre"><?php echo $album['genre'] ?></div>
+                    <div class="container-album">
+                        <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>" class="cover">
+                        <div class="info-album">
+                            <h3 class="title-cd">
+                                <?php echo $album['title'] ?>
+                            </h3>
+                            <div class="author"><?php echo $album['author'] ?></div>
+                            <div class="year"><?php echo $album['year'] ?></div>
+                            <div class="genre"><?php echo $album['genre'] ?></div>
+                        </div>
                     </div>
                 </li>
                 <?php } ?>
-
             </ul>
         </div>
     </main>
