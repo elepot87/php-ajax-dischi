@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: #182d3d;
+}
+
 /* Header */
 .header {
   background-color: #132431;

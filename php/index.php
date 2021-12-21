@@ -11,6 +11,12 @@
 </head>
 
 <body>
+
+    <!-- Richiamo i miei data del database in php -->
+    <?php
+    require_once __DIR__ . '/partials/database.php' ; 
+    ?>
+
     <!-- Header -->
     <header class='header'>
         <div class="container">
@@ -21,15 +27,21 @@
     <main>
         <div class="container">
             <ul class="main-list">
+                <?php 
+                foreach ($database as $album) { ?>
                 <li class="list-item">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="" class="cover">
+                    <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>" class="cover">
                     <div class="info-album">
-                        <h3 class="title-cd">prova</h3>
-                        <div class="author">Bon Jovi</div>
-                        <div class="year">1988</div>
-                        <div class="genre">Rock</div>
+                        <h3 class="title-cd">
+                            <?php echo $album['title'] ?>
+                        </h3>
+                        <div class="author"><?php echo $album['author'] ?></div>
+                        <div class="year"><?php echo $album['year'] ?></div>
+                        <div class="genre"><?php echo $album['genre'] ?></div>
                     </div>
                 </li>
+                <?php } ?>
+
             </ul>
         </div>
     </main>
