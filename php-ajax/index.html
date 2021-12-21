@@ -22,14 +22,18 @@
       <main>
         <div class="container">
           <ul class="main-list">
-            <li class="list-item">
+            <li
+              class="list-item"
+              v-for="(album, index) in albums"
+              :key="`album-id-${index}`"
+            >
               <div class="container-album">
-                <img src="" alt=" " class="cover" />
+                <img :src="album.poster" :alt="album.title" class="cover" />
                 <div class="info-album">
-                  <h3 class="title-cd"></h3>
-                  <div class="author"></div>
-                  <div class="year"></div>
-                  <div class="genre"></div>
+                  <h3 class="title-cd">{{album.title}}</h3>
+                  <div class="author">{{album.author}}</div>
+                  <div class="year">{{album.year}}</div>
+                  <div class="genre">{{album.genre}}</div>
                 </div>
               </div>
             </li>
